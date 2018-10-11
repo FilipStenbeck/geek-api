@@ -5,15 +5,16 @@ const hotGamesHandler = require('./handlers/hotGamesHandler');
 
 const app = express();
 
+/*
+* Configure headers
+*/
+
 app.use(function cors(req, res, next) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
   res.setHeader('Access-Control-Max-Age', '3600');
-  res.setHeader(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  );
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.setHeader('Cache-Control', 'max-age=120');
   next();
 });

@@ -28,7 +28,8 @@
   "dependencies": {
     "apicache": "^1.2.3",
     "dotenv": "^6.1.0",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "node-fetch": "^2.2.0"
   },
   "devDependencies": {
     "@zeit/eslint-config-node": "^0.3.0",
@@ -47,7 +48,21 @@
       ],
       "comma-dangle": [
         "error",
-        "always"
+        "only-multiline"
+      ],
+      "arrow-parens": [
+        "error",
+        "as-needed"
+      ],
+      "no-shadow": [
+        "warn",
+        {
+          "builtinGlobals": false,
+          "hoist": "functions",
+          "allow": [
+            "res"
+          ]
+        }
       ]
     }
   }
