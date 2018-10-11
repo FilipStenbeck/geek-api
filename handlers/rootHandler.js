@@ -9,6 +9,9 @@ const template = `<html>
     <p>
       A json wrapper around boardgamegeek XML <a href="https://boardgamegeek.com/wiki/page/BGG_XML_API2">API.</a>
     </p>
+    <p>
+      Boardgamegeek <a href="https://boardgamegeek.com/xmlapi/termsofuse">terms of use</a>
+    </p>
   </body>
   `;
 
