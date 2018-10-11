@@ -1,0 +1,27 @@
+{
+  "name": "geek-api",
+  "version": "0.0.1",
+  "description": "boardgame geek api xml -> json",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FilipStenbeck/geek-api.git"
+  },
+  "keywords": [
+    "api",
+    "boardgamegeek",
+    "json"
+  ],
+  "author": "Filip Stenbeck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FilipStenbeck/geek-api/issues"
+  },
+  "homepage": "https://github.com/FilipStenbeck/geek-api#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
