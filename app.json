@@ -1,0 +1,22 @@
+{
+  "name": "geek-api",
+  "scripts": {
+  },
+  "env": {
+    "API_CACHE_DEBUG": "false",
+    "API_CACHE_ENABLED": "false"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
