@@ -36,6 +36,7 @@ const gameModel = game => ({
   implementations: implementations(game.link),
   designers: designers(game.link),
   publishers: publishers(game.link),
+  videos: game.videos.reduce(item => item).video.map(v => v.$),
 });
 
 const gamesModel = json => json.items.item.map(gameModel).reduce(item => item);
@@ -44,7 +45,7 @@ module.exports = function gameDetailsHandler(req, res) {
   const id = req.params.id;
   res.type('application/json');
 
-  fetch(`https://boardgamegeek.com/xmlapi2/thing/?id=${id}`)
+  fetch(`https://boardgamegeek.com/xmlapi2/thing/?id=${id}&videos=1`)
     .then(res => res.text())
     .then(body => parseXml(body))
     .then(json => res.send(gamesModel(json)));
