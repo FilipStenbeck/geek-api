@@ -3,6 +3,7 @@ const env = require('./env');
 const rootHandler = require('./handlers/rootHandler');
 const hotGamesHandler = require('./handlers/hotGamesHandler');
 const gameDetailsHandler = require('./handlers/gameDetailsHandler');
+const searchHandler = require('./handlers/searchHandler');
 
 const app = express();
 
@@ -36,6 +37,7 @@ const apicache = require('apicache').options({
 app.get('/', apicache(), rootHandler);
 app.get('/hotgames', apicache(), hotGamesHandler);
 app.get('/game/:id', apicache(), gameDetailsHandler);
+app.get('/search', apicache(), searchHandler);
 
 const port = env.PORT;
 console.log('Running on port: %s', env.PORT);
