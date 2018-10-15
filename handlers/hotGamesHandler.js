@@ -4,9 +4,9 @@ const { parseXml } = require('../utils/xmlUtil');
 const hotGameModel = game => ({
   id: game.$.id,
   rank: game.$.rank,
-  name: game.name.reduce(item => item).$.value,
-  yearpublished: game.yearpublished.reduce(item => item).$.value,
-  thumbnail: game.thumbnail.reduce(item => item).$.value,
+  name: game.name ? game.name.reduce(item => item).$.value : '',
+  yearpublished: game.yearpublished ? game.yearpublished.reduce(item => item).$.value : '',
+  thumbnail: game.thumbnail ? game.thumbnail.reduce(item => item).$.value : '',
 });
 
 const hotGamesModel = json => json.items.item.map(hotGameModel);
