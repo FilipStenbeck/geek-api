@@ -16,6 +16,10 @@ const families = links => links.filter(item => item.$.type === 'boardgamefamily'
 const implementations = links => links.filter(i => i.$.type === 'boardgameimplementation').map(i => i.$.value);
 const designers = links => links.filter(item => item.$.type === 'boardgamedesigner').map(item => item.$.value);
 const publishers = links => links.filter(item => item.$.type === 'boardgamepublisher').map(item => item.$.value);
+const videos = videoList => {
+  const clean = videoList.reduce(item => item);
+  return clean.video ? clean.video.map(v => v.$) : [];
+};
 
 const gameModel = game => ({
   id: game.$.id,
@@ -36,7 +40,7 @@ const gameModel = game => ({
   implementations: implementations(game.link),
   designers: designers(game.link),
   publishers: publishers(game.link),
-  videos: game.videos.reduce(item => item).video.map(v => v.$),
+  videos: videos(game.videos),
 });
 
 const gamesModel = json => json.items.item.map(gameModel).reduce(item => item);
