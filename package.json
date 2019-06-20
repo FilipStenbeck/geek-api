@@ -4,7 +4,7 @@
   "description": "boardgame geek api xml -> json",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "echo there should be tests",
     "dev": "nodemon index.js",
     "start": "node index.js",
     "start:local": "API_CACHE_ENABLED=true API_CACHE_DEBUG=true node index.js",
