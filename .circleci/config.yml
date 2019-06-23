@@ -27,14 +27,16 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
+  test:
+    steps:
       # run lint!
       - run: yarn lint
 
       # run tests!
       - run: yarn test
-
+  deploy:
+    steps:
       - run:
-          name: 'test environment variables in build settings'
+          name: 'deploying'
           command: |
             echo $TEST_ENV
