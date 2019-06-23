@@ -59,7 +59,7 @@ jobs:
       - restore_cache:
           keys:
             - v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-      - run: echo $TEST_ENV
+      - run: npx semantic-release
 workflows:
   version: 2
   build-and-deploy:
