@@ -59,7 +59,7 @@ jobs:
       - restore_cache:
           keys:
             - v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-      - run: npx semantic-release
+      - run: yarn release
 workflows:
   version: 2
   build-and-deploy:
@@ -78,4 +78,3 @@ workflows:
           requires:
             - lint
             - test
-            - build

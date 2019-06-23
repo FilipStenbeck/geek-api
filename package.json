@@ -13,7 +13,8 @@
     "docker:run": "docker run -p 3000:3000 geek-api:latest",
     "precommit": "eslint .",
     "eslint": "eslint .",
-    "lint": "zeit-eslint --ext .jsx,.js ."
+    "lint": "zeit-eslint --ext .jsx,.js .",
+    "release": "semantic-release --branch master --yes"
   },
   "engines": {
     "node": "10.13.0"
