@@ -62,7 +62,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - '49:ef:17:3c:5b:d1:7a:85:49:82:6d:ff:bd:6d:6d:02'
-            - 'SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.'
+            - 'de:f0:1b:7f:d3:22:39:bb:18:34:4f:08:17:e2:55:f5'
       - run: yarn release
 workflows:
   version: 2
