@@ -48,6 +48,7 @@ jobs:
       - restore_cache:
           keys:
             - v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - setup_remote_docker
       - run: yarn docker:build
 
   deploy:
