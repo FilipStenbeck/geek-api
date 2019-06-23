@@ -48,9 +48,7 @@ jobs:
       - restore_cache:
           keys:
             - v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-      - run:
-        command: |
-          echo $TEST_ENV
+      - run: echo $TEST_ENV
 workflows:
   version: 2
   build-and-deploy:
