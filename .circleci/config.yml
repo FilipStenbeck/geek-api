@@ -53,6 +53,13 @@ workflows:
   build-and-deploy:
     jobs:
       - prepare
-      - lint
-      - test
-      - deploy
+      - lint:
+          requires:
+            - prepare
+      - test:
+          requires:
+            - prepare
+      - deploy:
+          requires:
+            - lint
+            - test
