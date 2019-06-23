@@ -33,3 +33,8 @@ jobs:
 
       # run tests!
       - run: yarn test
+
+      - run:
+          name: 'test environment '
+          command: |
+            echo 'TEST $TEST'
