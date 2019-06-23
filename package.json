@@ -14,7 +14,7 @@
     "precommit": "eslint .",
     "eslint": "eslint .",
     "lint": "zeit-eslint --ext .jsx,.js .",
-    "release": "semantic-release --branch master --yes"
+    "release": "semantic-release"
   },
   "engines": {
     "node": "10.13.0"
@@ -42,6 +42,8 @@
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
+    "@semantic-release/commit-analyzer": "^6.2.0",
+    "@semantic-release/release-notes-generator": "^7.2.0",
     "@zeit/eslint-config-node": "^0.3.0",
     "eslint": "^5.6.1",
     "husky": "^1.1.2",
