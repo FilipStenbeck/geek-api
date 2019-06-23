@@ -24,7 +24,7 @@ jobs:
 
       - save_cache:
           paths:
-            - node_modules
+            - ~/repo
           key: v1-dependencies-{{ checksum "package.json" }}
   lint:
     docker:
