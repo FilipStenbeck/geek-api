@@ -4,7 +4,7 @@
   "description": "boardgame geek api xml -> json",
   "main": "index.js",
   "scripts": {
-    "test": "echo there should be tests",
+    "test": "jest",
     "dev": "nodemon index.js",
     "start": "node index.js",
     "start:local": "API_CACHE_ENABLED=true API_CACHE_DEBUG=true node index.js",
@@ -41,6 +41,7 @@
     "@zeit/eslint-config-node": "^0.3.0",
     "eslint": "^5.6.1",
     "husky": "^1.1.2",
+    "jest": "^24.8.0",
     "nodemon": "^1.18.4"
   },
   "eslintConfig": {
