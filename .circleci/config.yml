@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  prepare:
     docker:
       - image: circleci/node:10.13.0
 
@@ -29,18 +29,21 @@ jobs:
   lint:
     docker:
       - image: circleci/node:10.13.0
+    working_directory: ~/repo
     steps:
       - run: yarn lint
 
   test:
     docker:
       - image: circleci/node:10.13.0
+    working_directory: ~/repo
     steps:
       - run: yarn test
 
   deploy:
     docker:
       - image: circleci/node:10.13.0
+    working_directory: ~/repo
     steps:
       - run:
         command: |
@@ -49,15 +52,7 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - build
-      - lint:
-        requires:
-          - build
-      - test:
-        requires:
-          - build
-      - deploy:
-        requires:
-          - build
-          - lint
-          - test
+      - prepare
+      - lint
+      - test
+      - deploy

@@ -1,6 +1,6 @@
 {
   "name": "geek-api",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "boardgame geek api xml -> json",
   "main": "index.js",
   "scripts": {
