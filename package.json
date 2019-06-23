@@ -8,6 +8,8 @@
     "dev": "nodemon index.js",
     "start": "node index.js",
     "start:local": "API_CACHE_ENABLED=true API_CACHE_DEBUG=true node index.js",
+    "docker:build": "docker build --no-cache -t geek-api .",
+    "docker:run": "docker run -p 3000:3000 geek-api:latest",
     "precommit": "eslint .",
     "eslint": "eslint .",
     "lint": "zeit-eslint --ext .jsx,.js ."
