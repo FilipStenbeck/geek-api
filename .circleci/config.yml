@@ -62,6 +62,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - 'cc:fc:86:5e:03:02:63:79:94:60:3b:20:27:bf:78:36'
+      - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - run: yarn release
 workflows:
   version: 2
