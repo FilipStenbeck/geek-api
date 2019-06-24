@@ -8,7 +8,7 @@ const searchHandler = require('./handlers/searchHandler');
 const app = express();
 
 /*
- * Configure headers.
+ * Configure headers!
  */
 
 app.use(function cors(req, res, next) {

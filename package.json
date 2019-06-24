@@ -1,7 +1,7 @@
 {
   "name": "geek-api",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "boardgame geek api xml -> json",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "precommit": "eslint .",
     "eslint": "eslint .",
     "lint": "zeit-eslint --ext .jsx,.js .",
-    "release": "semantic-release"
+    "release": "semantic-release --debug"
   },
   "engines": {
     "node": "10.13.0"
