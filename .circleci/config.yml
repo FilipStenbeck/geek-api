@@ -61,7 +61,7 @@ jobs:
             - v1-repo-{{ .Environment.CIRCLE_SHA1 }}
       - add_ssh_keys:
           fingerprints:
-            - '87:98:71:88:47:b5:f0:1a:13:e5:e6:af:ee:0c:ca:57'
+            - 'cc:fc:86:5e:03:02:63:79:94:60:3b:20:27:bf:78:36'
       - run: yarn release
 workflows:
   version: 2
