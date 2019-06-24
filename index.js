@@ -8,8 +8,8 @@ const searchHandler = require('./handlers/searchHandler');
 const app = express();
 
 /*
-* Configure headers
-*/
+ * Configure headers.
+ */
 
 app.use(function cors(req, res, next) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -22,8 +22,8 @@ app.use(function cors(req, res, next) {
 });
 
 /*
-* Configure cache
-*/
+ * Configure cache
+ */
 
 const apicache = require('apicache').options({
   debug: env.API_CACHE_DEBUG,
@@ -32,8 +32,8 @@ const apicache = require('apicache').options({
 }).middleware;
 
 /*
-* Configure routes
-*/
+ * Configure routes
+ */
 app.get('/', apicache(), rootHandler);
 app.get('/hotgames', apicache(), hotGamesHandler);
 app.get('/game/:id', apicache(), gameDetailsHandler);
