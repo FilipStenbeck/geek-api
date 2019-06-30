@@ -14,7 +14,8 @@
     "precommit": "eslint .",
     "eslint": "eslint .",
     "lint": "zeit-eslint --ext .jsx,.js .",
-    "release": "semantic-release --debug"
+    "release": "semantic-release --debug",
+    "deploy": "bash deploy.sh"
   },
   "engines": {
     "node": "10.13.0"
