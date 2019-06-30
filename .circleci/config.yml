@@ -81,3 +81,4 @@ workflows:
           requires:
             - lint
             - test
+            - build
