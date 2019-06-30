@@ -48,7 +48,8 @@ jobs:
       - restore_cache:
           keys:
             - v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-      - setup_remote_docker
+      - setup_remote_docker:
+          docker_layer_caching: true
       - run: yarn docker:build
 
   deploy:
@@ -61,7 +62,8 @@ jobs:
             - v1-repo-{{ .Environment.CIRCLE_SHA1 }}
       - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - run: yarn release
-      - setup_remote_docker
+      - setup_remote_docker:
+          docker_layer_caching: true
       - run: yarn deploy
 workflows:
   version: 2
