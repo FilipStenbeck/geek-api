@@ -7,7 +7,7 @@ PACKAGE_VERSION=$(cat package.json \
 
 PACKAGE_VERSION="$(echo -e "${PACKAGE_VERSION}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 
-echo Deploying: geek-api:latest filipstenbeck/geek-api:$PACKAGE_VERSION
+echo Deploying: filipstenbeck/geek-api:$PACKAGE_VERSION
 docker login --username=$DOCKER_HUB_USER --password=$DOCKER_HUB_PASSWORD
 
 docker tag geek-api:latest filipstenbeck/geek-api:$PACKAGE_VERSION
