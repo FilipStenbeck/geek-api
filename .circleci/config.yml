@@ -67,6 +67,10 @@ workflows:
 
       - deploy:
           context: globals
+          filters:
+            branches:
+              only:
+                - master
           requires:
             - lint
             - test
