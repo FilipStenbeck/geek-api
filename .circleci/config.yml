@@ -82,6 +82,11 @@ workflows:
             - lint
             - test
 
+      - hold:
+          type: approval
+          requires:
+            - deploy
+
       - production:
           type: approval
           filters:
@@ -89,4 +94,4 @@ workflows:
               only:
                 - master
           requires:
-            - deploy
+            - hold
