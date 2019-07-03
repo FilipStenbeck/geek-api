@@ -1,3 +1,3 @@
 # Geek-api
 
-Boardgamegeek json API
+Boardgamegeek json API!
