@@ -55,6 +55,8 @@ jobs:
       - run: yarn deploy
 
   production:
+    docker:
+      - image: circleci/node:10.13.0
     type: approval
     steps:
       - run: echo "Going to production!!!"
